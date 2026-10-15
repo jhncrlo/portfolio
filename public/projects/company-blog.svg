@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="12" fill="#0f172a"/>
+  <rect x="0" y="0" width="800" height="36" rx="12" fill="#1e293b"/>
+  <rect x="0" y="24" width="800" height="12" fill="#1e293b"/>
+  <circle cx="20" cy="18" r="5" fill="#ef4444" opacity="0.7"/>
+  <circle cx="38" cy="18" r="5" fill="#eab308" opacity="0.7"/>
+  <circle cx="56" cy="18" r="5" fill="#22c55e" opacity="0.7"/>
+  <rect x="200" y="10" width="400" height="16" rx="8" fill="#0f172a"/>
+  <text x="400" y="22" text-anchor="middle" font-family="system-ui" font-size="10" fill="#64748b">company-blog.com</text>
+  <!-- Nav -->
+  <rect x="0" y="36" width="800" height="44" fill="#1e293b"/>
+  <text x="40" y="63" font-family="system-ui" font-size="14" font-weight="700" fill="white">Company Blog</text>
+  <text x="560" y="63" font-family="system-ui" font-size="10" fill="#94a3b8">Home</text>
+  <text x="620" y="63" font-family="system-ui" font-size="10" fill="#94a3b8">Articles</text>
+  <text x="690" y="63" font-family="system-ui" font-size="10" fill="#94a3b8">About</text>
+  <text x="740" y="63" font-family="system-ui" font-size="10" fill="#94a3b8">Contact</text>
+  <!-- Featured post -->
+  <rect x="40" y="100" width="460" height="240" rx="10" fill="#1e293b"/>
+  <rect x="40" y="100" width="460" height="150" rx="10" fill="#334155"/>
+  <rect x="40" y="240" width="460" height="10" fill="#1e293b"/>
+  <text x="60" y="278" font-family="system-ui" font-size="8" font-weight="600" fill="#3b82f6">FEATURED</text>
+  <text x="60" y="300" font-family="system-ui" font-size="16" font-weight="600" fill="#e2e8f0">Building a Better Workplace Culture</text>
+  <text x="60" y="320" font-family="system-ui" font-size="10" fill="#64748b">How our team approaches collaboration and growth...</text>
+  <!-- Sidebar -->
+  <text x="540" y="120" font-family="system-ui" font-size="12" font-weight="600" fill="#e2e8f0">Recent Posts</text>
+  <rect x="540" y="135" width="220" height="56" rx="6" fill="#1e293b"/>
+  <rect x="550" y="145" width="36" height="36" rx="4" fill="#334155"/>
+  <text x="596" y="160" font-family="system-ui" font-size="10" font-weight="500" fill="#cbd5e1">Q3 Company Update</text>
+  <text x="596" y="174" font-family="system-ui" font-size="8" fill="#64748b">Oct 10, 2026</text>
+  <rect x="540" y="200" width="220" height="56" rx="6" fill="#1e293b"/>
+  <rect x="550" y="210" width="36" height="36" rx="4" fill="#334155"/>
+  <text x="596" y="225" font-family="system-ui" font-size="10" font-weight="500" fill="#cbd5e1">New Team Members</text>
+  <text x="596" y="239" font-family="system-ui" font-size="8" fill="#64748b">Sep 28, 2026</text>
+  <rect x="540" y="265" width="220" height="56" rx="6" fill="#1e293b"/>
+  <rect x="550" y="275" width="36" height="36" rx="4" fill="#334155"/>
+  <text x="596" y="290" font-family="system-ui" font-size="10" font-weight="500" fill="#cbd5e1">Product Launch Recap</text>
+  <text x="596" y="304" font-family="system-ui" font-size="8" fill="#64748b">Sep 15, 2026</text>
+  <!-- Article grid -->
+  <text x="40" y="380" font-family="system-ui" font-size="12" font-weight="600" fill="#e2e8f0">All Articles</text>
+  <rect x="40" y="395" width="230" height="85" rx="6" fill="#1e293b"/>
+  <rect x="50" y="405" width="210" height="40" rx="4" fill="#334155"/>
+  <text x="60" y="465" font-family="system-ui" font-size="9" font-weight="500" fill="#cbd5e1">Internal Communications Guide</text>
+  <rect x="285" y="395" width="230" height="85" rx="6" fill="#1e293b"/>
+  <rect x="295" y="405" width="210" height="40" rx="4" fill="#334155"/>
+  <text x="305" y="465" font-family="system-ui" font-size="9" font-weight="500" fill="#cbd5e1">Annual Report Highlights</text>
+  <rect x="530" y="395" width="230" height="85" rx="6" fill="#1e293b"/>
+  <rect x="540" y="405" width="210" height="40" rx="4" fill="#334155"/>
+  <text x="550" y="465" font-family="system-ui" font-size="9" font-weight="500" fill="#cbd5e1">Tech Stack Overview</text>
+</svg>
