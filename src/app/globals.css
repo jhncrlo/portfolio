@@ -50,11 +50,16 @@ body {
   background: var(--color-bg);
   color: var(--color-fg);
   font-family: var(--font-body);
-  cursor: none;
   transition: background-color 0.3s, color 0.3s;
 }
 
-a, button, [role="button"], input, textarea, select {
+body.custom-cursor,
+body.custom-cursor a,
+body.custom-cursor button,
+body.custom-cursor [role="button"],
+body.custom-cursor input,
+body.custom-cursor textarea,
+body.custom-cursor select {
   cursor: none;
 }
 

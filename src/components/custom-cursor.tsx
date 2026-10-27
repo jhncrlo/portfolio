@@ -21,6 +21,8 @@ export function CustomCursor() {
     )
       return;
 
+    document.body.classList.add("custom-cursor");
+
     if (dotRef.current) dotRef.current.style.display = "block";
     if (ringRef.current) ringRef.current.style.display = "block";
 
@@ -33,13 +35,15 @@ export function CustomCursor() {
     const onOver = (e: MouseEvent) => {
       if ((e.target as HTMLElement).closest(sel)) {
         hovering.current = true;
-        document.body.classList.add("cursor-hover");
+        dotRef.current?.classList.add("cursor-hovering");
+        ringRef.current?.classList.add("cursor-hovering");
       }
     };
     const onOut = (e: MouseEvent) => {
       if ((e.target as HTMLElement).closest(sel)) {
         hovering.current = false;
-        document.body.classList.remove("cursor-hover");
+        dotRef.current?.classList.remove("cursor-hovering");
+        ringRef.current?.classList.remove("cursor-hovering");
       }
     };
 
@@ -66,11 +70,11 @@ export function CustomCursor() {
     raf.current = requestAnimationFrame(tick);
 
     return () => {
+      document.body.classList.remove("custom-cursor");
       document.removeEventListener("mousemove", onMove);
       document.removeEventListener("mouseover", onOver);
       document.removeEventListener("mouseout", onOut);
       cancelAnimationFrame(raf.current);
-      document.body.classList.remove("cursor-hover");
     };
   }, []);
 
@@ -78,20 +82,20 @@ export function CustomCursor() {
     <>
       <div
         ref={dotRef}
-        className="pointer-events-none fixed left-0 top-0 z-[9999] h-2 w-2 rounded-full bg-accent will-change-transform hidden max-md:!hidden"
+        className="pointer-events-none fixed left-0 top-0 z-[9999] h-2 w-2 rounded-full bg-accent will-change-transform max-md:!hidden"
         aria-hidden="true"
         style={{ display: "none" }}
       />
       <div
         ref={ringRef}
-        className="pointer-events-none fixed left-0 top-0 z-[9998] h-10 w-10 rounded-full border-[1.5px] border-accent/35 will-change-transform hidden max-md:!hidden transition-[width,height,border-color] duration-[250ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+        className="pointer-events-none fixed left-0 top-0 z-[9998] h-10 w-10 rounded-full border-[1.5px] border-accent/35 will-change-transform max-md:!hidden transition-[width,height,border-color] duration-[250ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
         aria-hidden="true"
         style={{ display: "none" }}
       />
       <style>{`
-        body.cursor-hover .cursor-dot-jcb { transform: scale(0) !important; opacity: 0; }
-        body.cursor-hover .cursor-ring-jcb { width: 60px; height: 60px; border-color: rgba(59,130,246,.5); }
-        @media (pointer: coarse) { .cursor-dot-jcb, .cursor-ring-jcb { display: none !important; } }
+        div.cursor-hovering[aria-hidden="true"]:first-of-type { transform: scale(0) !important; opacity: 0; }
+        div.cursor-hovering[aria-hidden="true"]:last-of-type { width: 60px; height: 60px; border-color: rgba(59,130,246,.5); }
+        @media (pointer: coarse) { body.custom-cursor, body.custom-cursor * { cursor: auto !important; } }
       `}</style>
     </>
   );
