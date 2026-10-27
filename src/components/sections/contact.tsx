@@ -17,9 +17,9 @@ export function Contact() {
         </Reveal>
         <Reveal delay={0.06}>
           <p className="mx-auto mt-6 max-w-lg text-[clamp(15px,1.5vw,18px)] leading-[1.7] text-fg-3">
-            Looking for a developer who can own a project end-to-end? I&apos;m
-            open to full-time roles, freelance projects, and remote
-            opportunities.
+            I&apos;m open to remote roles, freelance projects, and contract work
+            with international teams. If you need a developer who can build and
+            maintain web applications, let&apos;s talk.
           </p>
         </Reveal>
         <Reveal delay={0.12}>
@@ -51,15 +51,42 @@ export function Contact() {
         </Reveal>
         <Reveal delay={0.18}>
           <div className="mt-8 flex justify-center gap-7">
-            <a href="#" className="text-sm text-fg-4 hover:text-fg-2">
+            <a
+              href={site.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-fg-4 hover:text-fg-2"
+            >
               GitHub
             </a>
-            <a href="#" className="text-sm text-fg-4 hover:text-fg-2">
-              LinkedIn
-            </a>
-            <a href="#" className="text-sm text-fg-4 hover:text-fg-2">
-              Resume
-            </a>
+            {site.links.linkedin !== "#" ? (
+              <a
+                href={site.links.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-fg-4 hover:text-fg-2"
+              >
+                LinkedIn
+              </a>
+            ) : (
+              <span className="text-sm text-fg-4/50" title="LinkedIn URL not configured yet">
+                LinkedIn
+              </span>
+            )}
+            {site.links.resume !== "#" ? (
+              <a
+                href={site.links.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-fg-4 hover:text-fg-2"
+              >
+                Resume
+              </a>
+            ) : (
+              <span className="text-sm text-fg-4/50" title="Resume link not configured yet">
+                Resume
+              </span>
+            )}
           </div>
         </Reveal>
       </div>

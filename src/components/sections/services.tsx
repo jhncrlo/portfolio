@@ -1,15 +1,15 @@
 "use client";
 
-import { Code2, TestTube, Bot, Monitor } from "lucide-react";
+import { Code2, Database, Bot, Wrench } from "lucide-react";
 import { services } from "@/data/site";
 import { Reveal } from "@/components/reveal";
 import { SectionLabel } from "@/components/section-label";
 
 const iconMap: Record<string, React.ElementType> = {
   "code-2": Code2,
-  "test-tube": TestTube,
+  database: Database,
   bot: Bot,
-  monitor: Monitor,
+  wrench: Wrench,
 };
 
 export function Services() {

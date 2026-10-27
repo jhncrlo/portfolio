@@ -101,12 +101,12 @@ export function SelectedWork() {
               href="/projects"
               className="hidden md:inline-flex items-center gap-2 text-sm text-fg-3 transition-colors hover:text-accent whitespace-nowrap"
             >
-              All projects
+              View details
               <ArrowRight size={14} />
             </a>
           </div>
         </Reveal>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {featured.map((p, i) => (
             <ProjectCard key={p.title} project={p} index={i} />
           ))}
@@ -117,7 +117,7 @@ export function SelectedWork() {
               href="/projects"
               className="inline-flex items-center gap-2 text-sm text-fg-3 transition-colors hover:text-accent"
             >
-              View all projects
+              View project details
               <ArrowRight size={14} />
             </a>
           </div>

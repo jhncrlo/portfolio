@@ -78,6 +78,15 @@ function ProjectDetailCard({
           {p.description}
         </p>
 
+        <div className="mt-4">
+          <span className="text-xs font-medium uppercase tracking-widest text-fg-4">
+            My Role
+          </span>
+          <p className="mt-1.5 text-sm leading-[1.7] text-fg-3">
+            {p.role}
+          </p>
+        </div>
+
         <div className="mt-6">
           <span className="text-xs font-medium uppercase tracking-widest text-fg-4">
             Built with

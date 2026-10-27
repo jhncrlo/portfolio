@@ -5,13 +5,13 @@
 
 export const site = {
   name: "John Carlo Bartolome",
-  title: "Web/Software Developer",
+  title: "Web/Software Developer | AI-Assisted Development",
   tagline:
-    "IT professional with hands-on experience in web development, system maintenance, and technical troubleshooting — from the interface to production.",
+    "BS Information Technology graduate with hands-on experience in web development, database-driven applications, and system maintenance. I work with PHP, MySQL, and CakePHP, and use AI tools to support coding, debugging, and problem-solving. Seeking remote opportunities with international teams and clients.",
   email: "johncarlobartolome02@gmail.com",
   phone: "+63 977 0369 172",
   links: {
-    github: "#",
+    github: "https://github.com/jhncrlo",
     linkedin: "#",
     resume: "#",
   },
@@ -21,6 +21,7 @@ export interface Project {
   title: string;
   category: string;
   description: string;
+  role: string;
   tech: string[];
   href: string | null;
   featured: boolean;
@@ -32,8 +33,9 @@ export const projects: Project[] = [
     title: "Insight Payroll",
     category: "Cloud Payroll & HRIS",
     description:
-      "Our own SaaS product. Philippine payroll with BIR TRAIN-law tax, SSS, PhilHealth and Pag-IBIG remittances, biometric attendance, and an employee self-service portal.",
-    tech: ["Laravel", "Alpine.js", "Tailwind CSS", "MySQL"],
+      "Web-based payroll and HRIS platform for Philippine businesses. Handles BIR TRAIN-law tax computation, SSS/PhilHealth/Pag-IBIG remittances, biometric attendance, leave and overtime management, and employee self-service.",
+    role: "Handled the complete lifecycle — requirements gathering, database design, interface development, testing, deployment, and ongoing maintenance.",
+    tech: ["Laravel", "PHP", "MySQL", "HTML", "CSS", "JavaScript"],
     href: "https://insightpayroll.com.ph",
     featured: true,
     image: "/projects/insight-payroll.jpg",
@@ -42,7 +44,8 @@ export const projects: Project[] = [
     title: "City of Batac",
     category: "Local Government Website",
     description:
-      "Official website of the City Government of Batac, Ilocos Norte: city profile, government directory, calendar of activities, and downloadable government forms.",
+      "Official website of the City Government of Batac, Ilocos Norte. Includes city profile, government directory, calendar of activities, and downloadable government forms.",
+    role: "Developed and maintained the website, managed content updates, and handled technical issues.",
     tech: ["WordPress", "PHP", "MySQL"],
     href: "https://batac.gov.ph",
     featured: true,
@@ -52,7 +55,8 @@ export const projects: Project[] = [
     title: "JPG Accounting",
     category: "Accounting Firm Website",
     description:
-      "Company website for a tax and accounting firm, with service pages, team profiles, inquiry forms, and online appointment booking.",
+      "Company website for a tax and accounting firm. Features service pages, team profiles, inquiry forms, and online appointment booking.",
+    role: "Built the website using WordPress and Elementor, configured forms, and set up the hosting environment.",
     tech: ["WordPress", "Elementor"],
     href: "https://jpgac.com",
     featured: true,
@@ -60,12 +64,13 @@ export const projects: Project[] = [
   },
   {
     title: "BIR Converter",
-    category: "BIR Compliance Tool",
+    category: "BIR Compliance Utility",
     description:
-      "Converts Excel spreadsheets to BIR-compliant DAT files for RELIEF and Alphalist Data Entry esubmission. Upload, convert, and download — no manual data entry needed.",
+      "Converts Excel spreadsheets into BIR-compliant DAT files for RELIEF and Alphalist Data Entry esubmission. Users upload a file, the tool validates and converts it, and they download the result — replacing manual data entry.",
+    role: "Built the application end-to-end — file upload handling, Excel parsing, data validation, DAT file generation, and the user interface.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     href: "https://www.birconverter.com",
-    featured: false,
+    featured: true,
     image: "/projects/bir-converter.jpg",
   },
 ];
@@ -93,7 +98,7 @@ export const caseStudy = {
     "Workflow management",
     "Data administration",
   ],
-  role: "Handled the complete lifecycle from requirements gathering and database design through interface design, development, testing, production deployment, and ongoing maintenance.",
+  role: "Handled the complete lifecycle from requirements gathering and database design through interface development, testing, production deployment, and ongoing maintenance. Worked on CRUD operations, user management, payroll computation logic, and database-driven reporting.",
   tech: ["Laravel", "PHP", "MySQL", "HTML", "CSS", "JavaScript"],
   hosting:
     "Deployed and hosted on Hostinger. Production system with active users.",
@@ -102,7 +107,7 @@ export const caseStudy = {
 export interface Experience {
   title: string;
   period: string;
-  summary: string;
+  bullets: string[];
   tags: string[];
 }
 
@@ -110,8 +115,12 @@ export const experience: Experience[] = [
   {
     title: "Web/Software Developer — IManila",
     period: "August 2025 – September 2026",
-    summary:
-      "Developed, maintained, and improved company websites and web-based systems using PHP, MySQL, and CakePHP/MVC. Maintained and troubleshot a database-driven HRIS, resolved CRUD operation issues, and independently handled varied web development, IT support, and system-maintenance tasks.",
+    bullets: [
+      "Developed, maintained, and improved company websites and web-based systems using PHP, MySQL, and CakePHP/MVC.",
+      "Maintained and troubleshot a database-driven HRIS — resolved CRUD operation issues, user management bugs, and database-related problems.",
+      "Used Claude AI and ChatGPT to support coding, debugging, and investigating technical problems.",
+      "Independently handled varied web development, IT support, and system-maintenance tasks.",
+    ],
     tags: [
       "PHP",
       "MySQL",
@@ -124,8 +133,10 @@ export const experience: Experience[] = [
   {
     title: "E-commerce Virtual Assistant — Trendysavers",
     period: "June 2022 – December 2024",
-    summary:
-      "Managed and updated eBay product listings, created optimized titles, descriptions, and product images using Adobe Photoshop. Organized product information and maintained accurate records for jewelry and photobook products.",
+    bullets: [
+      "Managed and updated eBay product listings — created optimized titles, descriptions, and product images.",
+      "Maintained accurate records and organized product information for jewelry and photobook inventory.",
+    ],
     tags: [
       "eBay",
       "Adobe Photoshop",
@@ -135,8 +146,9 @@ export const experience: Experience[] = [
   {
     title: "IT Intern — Provincial Governor's Office",
     period: "486 hours — Tarlac Provincial Hospital",
-    summary:
-      "Supported computer-based administrative operations, data entry, and document management using Microsoft Excel. Helped personnel manage digital records and maintained organized documentation.",
+    bullets: [
+      "Supported administrative operations through data entry, document management, and digital records maintenance using Microsoft Excel.",
+    ],
     tags: [
       "Microsoft Excel",
       "Data entry",
@@ -146,13 +158,13 @@ export const experience: Experience[] = [
 ];
 
 export const skills: Record<string, string[]> = {
-  "Web Development": ["HTML", "CSS", "PHP", "JavaScript", "CakePHP", "MVC"],
+  "Web Development": ["PHP", "HTML", "CSS", "JavaScript"],
+  "Frameworks & Architecture": ["CakePHP", "MVC", "Laravel"],
   Database: ["MySQL", "phpMyAdmin"],
-  Programming: ["Java", "Python"],
-  "AI Tools": ["Claude AI", "ChatGPT"],
-  "Software QA": ["Issue identification", "Testing concepts", "Debugging"],
-  Design: ["Adobe Photoshop", "Canva"],
-  Productivity: ["Microsoft Excel", "Data management"],
+  "Programming Fundamentals": ["Java", "Python"],
+  "AI-Assisted Development": ["Claude AI", "ChatGPT"],
+  "Software Maintenance": ["Debugging", "Troubleshooting", "Database-driven applications"],
+  "Additional Tools": ["Microsoft Excel", "Adobe Photoshop", "Canva"],
 };
 
 export interface Service {
@@ -166,25 +178,25 @@ export const services: Service[] = [
     icon: "code-2",
     title: "Web Development",
     description:
-      "Building and maintaining websites and web-based systems using PHP, MySQL, CakePHP, and MVC architecture — from database to interface.",
+      "Building and maintaining websites and web-based systems using PHP, MySQL, CakePHP, and MVC architecture — from database design to user interface.",
   },
   {
-    icon: "test-tube",
-    title: "Software QA",
+    icon: "database",
+    title: "Database & CRUD Applications",
     description:
-      "Issue identification, testing, debugging, and resolving CRUD operation issues and database-related problems across web applications.",
+      "Developing database-driven applications with user management, data processing, form validation, and reporting using MySQL and PHP.",
   },
   {
     icon: "bot",
     title: "AI-Assisted Development",
     description:
-      "Using Claude AI and ChatGPT to support coding, debugging, and system improvements — accelerating development with practical AI tools.",
+      "Using Claude AI and ChatGPT to support coding, debugging, and system improvements — reviewing and testing output rather than blindly accepting it.",
   },
   {
-    icon: "monitor",
-    title: "Technical Support",
+    icon: "wrench",
+    title: "Maintenance & Troubleshooting",
     description:
-      "System maintenance, troubleshooting, and IT support. Independently handling varied web development and system-maintenance tasks.",
+      "Diagnosing and resolving issues in existing web applications — CRUD bugs, database problems, deployment issues, and system maintenance.",
   },
 ];
 
@@ -197,11 +209,11 @@ export const facts = [
   { label: "Location", value: "Tarlac City, Philippines" },
   {
     label: "Focus",
-    value: "Web development, software QA, AI-assisted development",
+    value: "Web development, database-driven applications, AI-assisted development",
   },
   {
-    label: "Looking For",
+    label: "Availability",
     value:
-      "Remote opportunities in software QA, web development, technical support, and AI-assisted development",
+      "Open to remote work with international teams and clients",
   },
 ] as const;

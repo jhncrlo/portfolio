@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { site } from "@/data/site";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 interface NavLink {
@@ -105,9 +106,13 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
-            <a href="#" className="text-sm text-accent">
-              Resume
-            </a>
+            {site.links.resume !== "#" ? (
+              <a href={site.links.resume} target="_blank" rel="noopener noreferrer" className="text-sm text-accent">
+                Resume
+              </a>
+            ) : (
+              <span className="text-sm text-accent/50">Resume</span>
+            )}
             <ThemeToggle />
           </div>
 
@@ -152,12 +157,20 @@ export function Navbar() {
               {l.label}
             </a>
           ))}
-          <a
-            href="#"
-            className="block rounded-lg px-4 py-3 text-base font-medium text-accent transition-colors hover:bg-bg-card"
-          >
-            Resume
-          </a>
+          {site.links.resume !== "#" ? (
+            <a
+              href={site.links.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-lg px-4 py-3 text-base font-medium text-accent transition-colors hover:bg-bg-card"
+            >
+              Resume
+            </a>
+          ) : (
+            <span className="block rounded-lg px-4 py-3 text-base font-medium text-accent/50">
+              Resume
+            </span>
+          )}
         </div>
       </div>
     </>

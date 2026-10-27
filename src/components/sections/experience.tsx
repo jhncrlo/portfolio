@@ -14,7 +14,13 @@ function ExpCard({ exp, delay }: { exp: (typeof experience)[number]; delay: numb
           </h3>
           <span className="shrink-0 text-sm text-fg-4">{exp.period}</span>
         </div>
-        <p className="leading-[1.7] text-fg-3">{exp.summary}</p>
+        <ul className="flex flex-col gap-2">
+          {exp.bullets.map((b, i) => (
+            <li key={i} className="leading-[1.7] text-fg-3 pl-4 relative before:absolute before:left-0 before:top-[0.6em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-fg-4/50">
+              {b}
+            </li>
+          ))}
+        </ul>
         {exp.tags.length > 0 && (
           <div className="mt-5 flex flex-wrap gap-2">
             {exp.tags.map((t) => (

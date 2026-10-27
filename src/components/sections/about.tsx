@@ -18,23 +18,28 @@ export function About() {
           <Reveal delay={0.06}>
             <div className="flex flex-col gap-5">
               <p className="text-[clamp(15px,1.5vw,18px)] leading-[1.7] text-fg-2">
-                I&apos;m a software engineer based in Tarlac, Philippines. I
+                I&apos;m a web/software developer based in Tarlac, Philippines. I
                 graduated with a BS in Information Technology from Tarlac State
-                University in 2025, and I currently work as an IT Specialist —
-                serving as the primary technology resource for my organization.
+                University in 2025. Most recently, I worked as a Web/Software
+                Developer at IManila, where I built and maintained websites and
+                web-based systems using PHP, MySQL, and CakePHP.
               </p>
               <p className="text-[clamp(15px,1.5vw,18px)] leading-[1.7] text-fg-2">
-                My day-to-day covers the complete software lifecycle: gathering
-                requirements, designing interfaces, building applications,
-                testing, deploying, and maintaining systems in production.
-                I&apos;ve built an HRIS/payroll platform, revamped a government
-                website, and developed internal business tools.
+                My experience covers developing database-driven applications,
+                maintaining an HRIS platform, resolving CRUD and database issues,
+                and using AI tools like Claude AI and ChatGPT to support development
+                and debugging. I&apos;ve also built a payroll system, worked on a
+                government website, and developed business tools.
               </p>
               <p className="text-[clamp(15px,1.5vw,18px)] leading-[1.7] text-fg-2">
-                Before this role, I worked for two and a half years as an
+                Before my developer role, I worked for two and a half years as an
                 e-commerce virtual assistant while finishing my degree — which
                 taught me to work independently, manage detail-heavy tasks, and
                 meet deadlines without someone looking over my shoulder.
+              </p>
+              <p className="text-[clamp(15px,1.5vw,18px)] leading-[1.7] text-fg-2">
+                I&apos;m currently seeking remote opportunities with international
+                teams and clients.
               </p>
             </div>
           </Reveal>
