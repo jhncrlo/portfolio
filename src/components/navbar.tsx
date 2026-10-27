@@ -12,6 +12,7 @@ interface NavLink {
 }
 
 const links: NavLink[] = [
+  { label: "Home", href: "/" },
   { label: "Work", href: "/projects" },
   { label: "Experience", href: "/#experience" },
   { label: "About", href: "/#about" },
@@ -59,7 +60,10 @@ export function Navbar() {
 
   const handleClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, link: NavLink) => {
-      if (isHome && link.href.startsWith("/#")) {
+      if (isHome && link.href === "/") {
+        e.preventDefault();
+        scrollTo("top");
+      } else if (isHome && link.href.startsWith("/#")) {
         e.preventDefault();
         scrollTo(link.href.slice(2));
       }

@@ -30,33 +30,43 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Insight Payroll",
-    category: "HRIS / Payroll System",
+    category: "Cloud Payroll & HRIS",
     description:
-      "A comprehensive HRIS and payroll platform that replaces manual payroll processing with a centralized system for employee management, attendance tracking, and payroll computation.",
-    tech: ["Laravel", "PHP", "MySQL", "JavaScript"],
-    href: "https://insightpayroll.com.ph/",
+      "Our own SaaS product. Philippine payroll with BIR TRAIN-law tax, SSS, PhilHealth and Pag-IBIG remittances, biometric attendance, and an employee self-service portal.",
+    tech: ["Laravel", "Alpine.js", "Tailwind CSS", "MySQL"],
+    href: "https://insightpayroll.com.ph",
     featured: true,
-    image: "/projects/insight-payroll.svg",
+    image: "/projects/insight-payroll.jpg",
   },
   {
-    title: "Government Website",
-    category: "Website Redesign",
+    title: "City of Batac",
+    category: "Local Government Website",
     description:
-      "Redesigned and revamped a government agency website — restructured the homepage, built new pages, and worked directly with production files.",
-    tech: ["WordPress", "PHP", "HTML", "CSS"],
-    href: null,
-    featured: false,
-    image: "/projects/government-website.svg",
+      "Official website of the City Government of Batac, Ilocos Norte: city profile, government directory, calendar of activities, and downloadable government forms.",
+    tech: ["WordPress", "PHP", "MySQL"],
+    href: "https://batac.gov.ph",
+    featured: true,
+    image: "/projects/batac-gov.jpg",
   },
   {
-    title: "Company Blog",
-    category: "Content Platform",
+    title: "JPG Accounting",
+    category: "Accounting Firm Website",
     description:
-      "Built a company blog for organizational publishing and internal communications.",
-    tech: ["WordPress", "Elementor", "PHP"],
-    href: null,
+      "Company website for a tax and accounting firm, with service pages, team profiles, inquiry forms, and online appointment booking.",
+    tech: ["WordPress", "Elementor"],
+    href: "https://jpgac.com",
+    featured: true,
+    image: "/projects/jpgac.jpg",
+  },
+  {
+    title: "BIR Converter",
+    category: "BIR Compliance Tool",
+    description:
+      "Converts Excel spreadsheets to BIR-compliant DAT files for RELIEF and Alphalist Data Entry esubmission. Upload, convert, and download — no manual data entry needed.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    href: "https://www.birconverter.com",
     featured: false,
-    image: "/projects/company-blog.svg",
+    image: "/projects/bir-converter.jpg",
   },
 ];
 

@@ -6,6 +6,45 @@ import { Footer } from "@/components/sections/footer";
 import { CustomCursor } from "@/components/custom-cursor";
 import type { Project } from "@/data/site";
 
+function BrowserFrame({
+  image,
+  title,
+  href,
+  index,
+}: {
+  image: string;
+  title: string;
+  href: string | null;
+  index: number;
+}) {
+  const domain = href
+    ? href.replace(/^https?:\/\//, "").replace(/\/.*$/, "")
+    : title;
+
+  return (
+    <div className="group overflow-hidden rounded-xl border border-border bg-bg-card shadow-lg">
+      <div className="flex items-center gap-2 border-b border-border bg-bg px-3 py-2">
+        <div className="flex gap-1.5">
+          <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
+        </div>
+        <div className="ml-2 flex-1 rounded-md bg-bg-card px-3 py-1 text-xs text-fg-3 truncate">
+          {domain}
+        </div>
+      </div>
+      <div className="overflow-hidden">
+        <img
+          src={image}
+          alt={`${title} — project screenshot`}
+          className="w-full aspect-[4/3] object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+          loading={index < 2 ? "eager" : "lazy"}
+        />
+      </div>
+    </div>
+  );
+}
+
 function ProjectDetailCard({
   project: p,
   index,
@@ -19,19 +58,15 @@ function ProjectDetailCard({
     <article
       className={`grid gap-8 md:gap-12 lg:grid-cols-2 lg:items-center ${flipped ? "lg:[direction:rtl]" : ""}`}
     >
-      {/* Image */}
       <div className={flipped ? "lg:[direction:ltr]" : ""}>
-        <div className="group overflow-hidden rounded-xl border border-border bg-bg-card">
-          <img
-            src={p.image}
-            alt={`${p.title} — project screenshot`}
-            className="w-full aspect-[16/10] object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-            loading={index < 2 ? "eager" : "lazy"}
-          />
-        </div>
+        <BrowserFrame
+          image={p.image}
+          title={p.title}
+          href={p.href}
+          index={index}
+        />
       </div>
 
-      {/* Details */}
       <div className={flipped ? "lg:[direction:ltr]" : ""}>
         <span className="text-xs font-medium uppercase tracking-widest text-accent">
           {p.category}
@@ -43,7 +78,6 @@ function ProjectDetailCard({
           {p.description}
         </p>
 
-        {/* Tech stack */}
         <div className="mt-6">
           <span className="text-xs font-medium uppercase tracking-widest text-fg-4">
             Built with
@@ -60,7 +94,6 @@ function ProjectDetailCard({
           </div>
         </div>
 
-        {/* Links */}
         {p.href && (
           <div className="mt-6 flex gap-3">
             <a
@@ -95,7 +128,6 @@ export function ProjectsPage({ projects }: { projects: Project[] }) {
       <Navbar />
       <main className="pt-28 pb-20 md:pt-36 md:pb-28">
         <div className="mx-auto max-w-[1100px] px-6 md:px-8">
-          {/* Header */}
           <div className="mb-16 md:mb-20">
             <a
               href="/"
@@ -113,7 +145,6 @@ export function ProjectsPage({ projects }: { projects: Project[] }) {
             </p>
           </div>
 
-          {/* Project list */}
           <div className="space-y-20 md:space-y-28">
             {projects.map((p, i) => (
               <ProjectDetailCard

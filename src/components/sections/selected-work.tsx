@@ -5,6 +5,39 @@ import { projects } from "@/data/site";
 import { Reveal } from "@/components/reveal";
 import { SectionLabel } from "@/components/section-label";
 
+function MiniPreview({
+  image,
+  title,
+  href,
+}: {
+  image: string;
+  title: string;
+  href: string | null;
+}) {
+  const domain = href
+    ? href.replace(/^https?:\/\//, "").replace(/\/.*$/, "")
+    : title;
+
+  return (
+    <div className="overflow-hidden rounded-lg border border-border/50 bg-bg-card">
+      <div className="flex items-center gap-1.5 border-b border-border/50 px-2.5 py-1.5">
+        <span className="h-1.5 w-1.5 rounded-full bg-[#ff5f57]" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#ffbd2e]" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#28c840]" />
+        <span className="ml-1.5 text-[10px] text-fg-4 truncate">{domain}</span>
+      </div>
+      <div className="overflow-hidden">
+        <img
+          src={image}
+          alt={`${title} screenshot`}
+          className="w-full aspect-video object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  );
+}
+
 function ProjectCard({
   project: p,
   index,
@@ -14,14 +47,7 @@ function ProjectCard({
 }) {
   const inner = (
     <>
-      <div className="overflow-hidden rounded-lg border border-border/50">
-        <img
-          src={p.image}
-          alt={`${p.title} screenshot`}
-          className="w-full aspect-video object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-          loading="lazy"
-        />
-      </div>
+      <MiniPreview image={p.image} title={p.title} href={p.href} />
       <div className="mt-5">
         <span className="text-xs font-medium uppercase tracking-widest text-accent">
           {p.category}
@@ -58,7 +84,7 @@ function ProjectCard({
 }
 
 export function SelectedWork() {
-  const featured = projects.slice(0, 3);
+  const featured = projects.filter((p) => p.featured);
 
   return (
     <section id="work" className="py-16 md:py-24">
