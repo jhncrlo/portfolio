@@ -5,9 +5,9 @@
 
 export const site = {
   name: "John Carlo Bartolome",
-  title: "Full-Stack Developer & IT Specialist",
+  title: "Web/Software Developer",
   tagline:
-    "I design, build, test, and deploy practical web systems — from the interface to production.",
+    "IT professional with hands-on experience in web development, system maintenance, and technical troubleshooting — from the interface to production.",
   email: "johncarlobartolome02@gmail.com",
   phone: "+63 977 0369 172",
   links: {
@@ -93,7 +93,7 @@ export const caseStudy = {
     "Workflow management",
     "Data administration",
   ],
-  role: "Sole developer — handled the complete lifecycle from requirements gathering and database design through interface design, full-stack development, testing, production deployment, and ongoing maintenance.",
+  role: "Handled the complete lifecycle from requirements gathering and database design through interface design, development, testing, production deployment, and ongoing maintenance.",
   tech: ["Laravel", "PHP", "MySQL", "HTML", "CSS", "JavaScript"],
   hosting:
     "Deployed and hosted on Hostinger. Production system with active users.",
@@ -108,40 +108,51 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
-    title: "IT Specialist",
-    period: "January 2026 – Present",
+    title: "Web/Software Developer — IManila",
+    period: "August 2025 – September 2026",
     summary:
-      "Primary technology resource for the organization. Independently manage the complete software lifecycle — from requirements and design through development, testing, deployment, and maintenance of production systems.",
+      "Developed, maintained, and improved company websites and web-based systems using PHP, MySQL, and CakePHP/MVC. Maintained and troubleshot a database-driven HRIS, resolved CRUD operation issues, and independently handled varied web development, IT support, and system-maintenance tasks.",
     tags: [
-      "Full-stack development",
-      "Database design",
-      "UI/UX implementation",
-      "QA & testing",
-      "Deployment & hosting",
-      "System maintenance",
+      "PHP",
+      "MySQL",
+      "CakePHP",
+      "MVC",
+      "HRIS",
+      "Claude AI",
     ],
   },
   {
-    title: "E-commerce Virtual Assistant",
+    title: "E-commerce Virtual Assistant — Trendysavers",
     period: "June 2022 – December 2024",
     summary:
-      "Managed product listings, order processing, and customer data independently while completing my degree. Built strong habits around attention to detail, meeting deadlines, and working autonomously — skills that directly carry over to how I approach software development.",
-    tags: [],
+      "Managed and updated eBay product listings, created optimized titles, descriptions, and product images using Adobe Photoshop. Organized product information and maintained accurate records for jewelry and photobook products.",
+    tags: [
+      "eBay",
+      "Adobe Photoshop",
+      "Product management",
+    ],
+  },
+  {
+    title: "IT Intern — Provincial Governor's Office",
+    period: "486 hours — Tarlac Provincial Hospital",
+    summary:
+      "Supported computer-based administrative operations, data entry, and document management using Microsoft Excel. Helped personnel manage digital records and maintained organized documentation.",
+    tags: [
+      "Microsoft Excel",
+      "Data entry",
+      "Document management",
+    ],
   },
 ];
 
 export const skills: Record<string, string[]> = {
-  Development: ["HTML", "CSS", "JavaScript", "PHP", "Laravel", "MySQL", "REST API"],
-  Web: ["WordPress", "Elementor"],
-  Tools: ["Git", "Claude Code", "ChatGPT", "FileZilla"],
-  Quality: [
-    "QA Testing",
-    "Functional Testing",
-    "UI Testing",
-    "Responsive Testing",
-    "Debugging",
-    "Bug Identification",
-  ],
+  "Web Development": ["HTML", "CSS", "PHP", "JavaScript", "CakePHP", "MVC"],
+  Database: ["MySQL", "phpMyAdmin"],
+  Programming: ["Java", "Python"],
+  "AI Tools": ["Claude AI", "ChatGPT"],
+  "Software QA": ["Issue identification", "Testing concepts", "Debugging"],
+  Design: ["Adobe Photoshop", "Canva"],
+  Productivity: ["Microsoft Excel", "Data management"],
 };
 
 export interface Service {
@@ -153,27 +164,27 @@ export interface Service {
 export const services: Service[] = [
   {
     icon: "code-2",
-    title: "Full-Stack Development",
+    title: "Web Development",
     description:
-      "Complete web applications from database to interface. I handle the full lifecycle — requirements, design, development, testing, deployment, and maintenance.",
-  },
-  {
-    icon: "globe",
-    title: "WordPress Development",
-    description:
-      "Custom WordPress sites built for real organizational needs. Direct theme and file-level work, not drag-and-drop page builders.",
+      "Building and maintaining websites and web-based systems using PHP, MySQL, CakePHP, and MVC architecture — from database to interface.",
   },
   {
     icon: "test-tube",
-    title: "QA & Testing",
+    title: "Software QA",
     description:
-      "Functional, UI, and responsive testing to ensure software works reliably before it reaches users. Systematic debugging and bug identification.",
+      "Issue identification, testing, debugging, and resolving CRUD operation issues and database-related problems across web applications.",
   },
   {
-    icon: "server",
-    title: "System Development",
+    icon: "bot",
+    title: "AI-Assisted Development",
     description:
-      "Transforming manual business processes into digital systems. I take operational problems and build the software that solves them.",
+      "Using Claude AI and ChatGPT to support coding, debugging, and system improvements — accelerating development with practical AI tools.",
+  },
+  {
+    icon: "monitor",
+    title: "Technical Support",
+    description:
+      "System maintenance, troubleshooting, and IT support. Independently handling varied web development and system-maintenance tasks.",
   },
 ];
 
@@ -181,16 +192,16 @@ export const facts = [
   {
     label: "Education",
     value: "BS Information Technology",
-    sub: "Tarlac State University, 2025",
+    sub: "Tarlac State University, Graduated July 2025",
   },
-  { label: "Location", value: "Tarlac, Philippines" },
+  { label: "Location", value: "Tarlac City, Philippines" },
   {
     label: "Focus",
-    value: "Full-stack development, system design, quality assurance",
+    value: "Web development, software QA, AI-assisted development",
   },
   {
     label: "Looking For",
     value:
-      "A team where end-to-end ownership is valued and reliable software is the standard",
+      "Remote opportunities in software QA, web development, technical support, and AI-assisted development",
   },
 ] as const;
