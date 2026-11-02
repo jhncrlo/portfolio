@@ -13,7 +13,7 @@ export const site = {
   links: {
     github: "https://github.com/jhncrlo",
     linkedin: "#",
-    resume: "#",
+    resume: "/John-Carlo-Bartolome-Resume.pdf",
   },
 } as const;
 

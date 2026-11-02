@@ -76,8 +76,7 @@ export function Contact() {
             {site.links.resume !== "#" ? (
               <a
                 href={site.links.resume}
-                target="_blank"
-                rel="noopener noreferrer"
+                download
                 className="text-sm text-fg-4 hover:text-fg-2"
               >
                 Resume

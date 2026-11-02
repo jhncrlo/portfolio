@@ -107,7 +107,7 @@ export function Navbar() {
               ))}
             </ul>
             {site.links.resume !== "#" ? (
-              <a href={site.links.resume} target="_blank" rel="noopener noreferrer" className="text-sm text-accent">
+              <a href={site.links.resume} download className="text-sm text-accent">
                 Resume
               </a>
             ) : (
@@ -160,8 +160,7 @@ export function Navbar() {
           {site.links.resume !== "#" ? (
             <a
               href={site.links.resume}
-              target="_blank"
-              rel="noopener noreferrer"
+              download
               className="block rounded-lg px-4 py-3 text-base font-medium text-accent transition-colors hover:bg-bg-card"
             >
               Resume
