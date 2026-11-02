@@ -113,7 +113,7 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
-    title: "Web/Software Developer — IManila",
+    title: "Web/Software Developer — Insight Business Consultancy Inc.",
     period: "August 2025 – September 2026",
     bullets: [
       "Developed, maintained, and improved company websites and web-based systems using PHP, MySQL, and CakePHP/MVC.",

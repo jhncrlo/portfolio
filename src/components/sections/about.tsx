@@ -21,7 +21,7 @@ export function About() {
                 I&apos;m a web/software developer based in Tarlac, Philippines. I
                 graduated with a BS in Information Technology from Tarlac State
                 University in 2025. Most recently, I worked as a Web/Software
-                Developer at IManila, where I built and maintained websites and
+                Developer at Insight Business Consultancy Inc., where I built and maintained websites and
                 web-based systems using PHP, MySQL, and CakePHP.
               </p>
               <p className="text-[clamp(15px,1.5vw,18px)] leading-[1.7] text-fg-2">
