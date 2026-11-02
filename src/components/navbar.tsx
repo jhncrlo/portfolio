@@ -106,13 +106,9 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
-            {site.links.resume !== "#" ? (
-              <a href={site.links.resume} download className="text-sm text-accent">
-                Resume
-              </a>
-            ) : (
-              <span className="text-sm text-accent/50">Resume</span>
-            )}
+            <a href={site.links.resume} download className="text-sm text-accent">
+              Resume
+            </a>
             <ThemeToggle />
           </div>
 
@@ -157,19 +153,13 @@ export function Navbar() {
               {l.label}
             </a>
           ))}
-          {site.links.resume !== "#" ? (
-            <a
-              href={site.links.resume}
-              download
-              className="block rounded-lg px-4 py-3 text-base font-medium text-accent transition-colors hover:bg-bg-card"
-            >
-              Resume
-            </a>
-          ) : (
-            <span className="block rounded-lg px-4 py-3 text-base font-medium text-accent/50">
-              Resume
-            </span>
-          )}
+          <a
+            href={site.links.resume}
+            download
+            className="block rounded-lg px-4 py-3 text-base font-medium text-accent transition-colors hover:bg-bg-card"
+          >
+            Resume
+          </a>
         </div>
       </div>
     </>

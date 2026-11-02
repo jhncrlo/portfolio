@@ -73,19 +73,13 @@ export function Contact() {
                 LinkedIn
               </span>
             )}
-            {site.links.resume !== "#" ? (
-              <a
-                href={site.links.resume}
-                download
-                className="text-sm text-fg-4 hover:text-fg-2"
-              >
-                Resume
-              </a>
-            ) : (
-              <span className="text-sm text-fg-4/50" title="Resume link not configured yet">
-                Resume
-              </span>
-            )}
+            <a
+              href={site.links.resume}
+              download
+              className="text-sm text-fg-4 hover:text-fg-2"
+            >
+              Resume
+            </a>
           </div>
         </Reveal>
       </div>
