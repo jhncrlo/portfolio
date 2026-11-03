@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <rect width="180" height="180" rx="32" fill="#ffffff"/>
+  <text x="90" y="118" text-anchor="middle" font-family="monospace" font-weight="700" font-size="82" fill="#0a0a0a">jcb</text>
+  <circle cx="143" cy="115" r="8" fill="#3b82f6"/>
+</svg>
