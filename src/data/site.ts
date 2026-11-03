@@ -12,7 +12,7 @@ export const site = {
   phone: "+63 977 0369 172",
   links: {
     github: "https://github.com/jhncrlo",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/john-carlo-bartolome-1378b6228/",
     resume: "/John-Carlo-Bartolome-Resume.pdf",
   },
 } as const;
