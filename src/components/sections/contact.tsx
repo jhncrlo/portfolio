@@ -59,20 +59,14 @@ export function Contact() {
             >
               GitHub
             </a>
-            {site.links.linkedin !== "#" ? (
-              <a
-                href={site.links.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-fg-4 hover:text-fg-2"
-              >
-                LinkedIn
-              </a>
-            ) : (
-              <span className="text-sm text-fg-4/50" title="LinkedIn URL not configured yet">
-                LinkedIn
-              </span>
-            )}
+            <a
+              href={site.links.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-fg-4 hover:text-fg-2"
+            >
+              LinkedIn
+            </a>
             <a
               href={site.links.resume}
               download
